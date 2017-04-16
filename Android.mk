@@ -68,7 +68,6 @@ include $(CLEAR_VARS)
 
 LOCAL_SRC_FILES := \
     adb_install.cpp \
-    asn1_decoder.cpp \
     device.cpp \
     fuse_sdcard_provider.cpp \
     recovery.cpp \
@@ -76,7 +75,6 @@ LOCAL_SRC_FILES := \
     rotate_logs.cpp \
     screen_ui.cpp \
     ui.cpp \
-    verifier.cpp \
     wear_ui.cpp \
     wear_touch.cpp \
 
@@ -100,6 +98,7 @@ LOCAL_C_INCLUDES += \
 
 LOCAL_STATIC_LIBRARIES := \
     librecovery \
+    libverifier \
     libbatterymonitor \
     libbootloader_message \
     libext4_utils \
@@ -174,7 +173,6 @@ include $(BUILD_EXECUTABLE)
 # ===============================
 include $(CLEAR_VARS)
 LOCAL_MODULE := libverifier
-LOCAL_MODULE_TAGS := tests
 LOCAL_SRC_FILES := \
     asn1_decoder.cpp \
     verifier.cpp
