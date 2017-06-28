@@ -58,7 +58,8 @@ LOCAL_STATIC_LIBRARIES := \
     libvintf_recovery \
     libcrypto_utils \
     libcrypto \
-    libbase
+    libbase \
+    libziparchive \
 
 include $(BUILD_STATIC_LIBRARY)
 
